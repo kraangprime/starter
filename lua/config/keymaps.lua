@@ -11,3 +11,5 @@ vim.keymap.set("n", "<Leader>re", ":split | term ruby % ", { noremap = true, sil
 vim.keymap.set("n", "<Leader>rbx", ":split | term bundle exec %<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>rbi", ":split | term bundle install <CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Leader>rbp", ":split | term bundle package <CR>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<Leader>tt", ":split | term <CR>", { noremap = true, silent = true })
