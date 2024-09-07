@@ -13,3 +13,11 @@ vim.keymap.set("n", "<Leader>rbi", ":split | term bundle install <CR>", { norema
 vim.keymap.set("n", "<Leader>rbp", ":split | term bundle package <CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<Leader>tt", ":split | term <CR>", { noremap = true, silent = true })
+
+-- Move multiple lines up or down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Search always stays at the middle
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
