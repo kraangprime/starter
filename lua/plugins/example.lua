@@ -34,7 +34,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-emoji" },
-    -- @param opts cmp.ConfigSchema
+    --- @param opts cmp.ConfigSchema
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
     end,
@@ -66,9 +66,9 @@ return {
   -- add pyright to lspconfig
   {
     "neovim/nvim-lspconfig",
-    -- @class PluginLspOpts
+    --- @class PluginLspOpts
     opts = {
-      -- @type lspconfig.options
+      --- @type lspconfig.options
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
@@ -89,16 +89,16 @@ return {
         end)
       end,
     },
-    -- @class PluginLspOpts
+    --- @class PluginLspOpts
     opts = {
-      -- @type lspconfig.options
+      --- @type lspconfig.options
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
-      -- @type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
+      --- @type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
       setup = {
         -- example to setup with typescript.nvim
         tsserver = function(_, opts)
