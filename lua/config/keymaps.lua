@@ -15,9 +15,20 @@ vim.keymap.set("n", "<Leader>rbp", ":split | term bundle package <CR>", { norema
 vim.keymap.set("n", "<Leader>tt", ":split | term <CR>", { noremap = true, silent = true })
 
 -- Move multiple lines up or down
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- Search always stays at the middle
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "n", "nzzzv", { noremap = true, silent = true })
+vim.keymap.set("n", "N", "Nzzzv", { noremap = true, silent = true })
+
+-- Copy delete into _x register
+vim.keymap.set("n", "x", '"_x"', { noremap = true, silent = true })
+
+-- Save all files
+-- vim.keymap.set("n", "<C-S> s", "<cmd>wa <CR>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "-", [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
+vim.keymap.set("n", "=", [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+vim.keymap.set("n", "+", [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
+vim.keymap.set("n", "_", [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
